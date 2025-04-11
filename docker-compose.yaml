@@ -2,6 +2,9 @@ services:
   sfs-2025:
     image: sfs-2025:0.0.5
     container_name: sfs-2025
+    volumes:
+      - ../frontend:/app # - alterar o caminho de acordo com a necessidade
+      - /app/node_modules
     ports:
       - "3040:3000"
     networks:
@@ -10,6 +13,9 @@ services:
   sfs-2025-back:
     image: sfs-2025-back:0.0.5
     container_name: sfs-2025-back
+    volumes:
+      - ../backend:/app # - alterar o caminho de acordo com a necessidade
+      - /app/node_modules
     ports:
       - "3050:3001"
     networks:
