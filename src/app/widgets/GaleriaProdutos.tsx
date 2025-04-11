@@ -1,3 +1,5 @@
+'use client';
+
 import Link from "next/link";
 
 const dados = {
@@ -206,6 +208,11 @@ const dados = {
 }
 
 export default function GaleriaProdutos() {
+    
+    const requisicao = () => {
+        const resposta = fetch("http://localhost:3040/")
+    }
+
     return (
         <div>
             <section className="max-w-7xl mx-auto px-4 py-8">
